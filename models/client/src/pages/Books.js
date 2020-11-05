@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
+function SignUp() {
   // Setting our component's initial state
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
@@ -59,7 +59,7 @@ function Books() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>What SignUp Should I Read?</h1>
             </Jumbotron>
             <form>
               <Input
@@ -87,7 +87,7 @@ function Books() {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>SignUp On My List</h1>
             </Jumbotron>
             {books.length ? (
               <List>
@@ -112,4 +112,4 @@ function Books() {
   }
 
 
-export default Books;
+export default SignUp;
