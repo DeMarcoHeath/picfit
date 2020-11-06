@@ -93,7 +93,7 @@ function SignUp() {
               <List>
                 {books.map(book => (
                   <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                    <Link to={"/login/" + book._id}>
                       <strong>
                         {book.title} by {book.author}
                       </strong>

@@ -8,6 +8,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 function SignUp() {
+
   // Setting our component's initial state
   const [books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
@@ -93,7 +94,7 @@ function SignUp() {
               <List>
                 {books.map(book => (
                   <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                    <Link to={"/login/" + book._id}>
                       <strong>
                         {book.title} by {book.author}
                       </strong>
