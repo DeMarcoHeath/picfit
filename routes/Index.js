@@ -1,13 +1,15 @@
-const path = require("path");
-const router = require("express").Router();
-const apiRoutes = require("./api");
+const express = require('express');
+const authRouter = require('./auth');
+const userRouter = require('./user');
+const postRouter = require('./post');
+const commentRouter = require('./comment');
+const notificationRouter = require('./notification');
+const apiRouter = express.Router();
 
-// API Routes
-router.use("/api", apiRoutes);
+apiRouter.use('/auth', authRouter);
+apiRouter.use('/user', userRouter);
+apiRouter.use('/post', postRouter);
+apiRouter.use('/comment', commentRouter);
+apiRouter.use('/notification', notificationRouter);
 
-// If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
-
-module.exports = router;
+module.exports = apiRouter;
