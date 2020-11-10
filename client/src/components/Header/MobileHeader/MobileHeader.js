@@ -30,7 +30,7 @@ const MobileHeader = ({ children, backArrow, style, show, currentUser }) => {
       ) : (
         <Fragment>
           <h3 style={{ fontSize: '2.5rem' }} className="heading-logo">
-            Instaclone
+            PicFit
           </h3>
           <div style={{ gridColumn: '-1' }}>
             <Button

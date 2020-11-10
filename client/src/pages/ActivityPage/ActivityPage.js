@@ -5,7 +5,7 @@ import NotificationFeed from '../../components/Notification/NotificationFeed/Not
 
 const ActivityPage = () => {
   useEffect(() => {
-    document.title = 'Instaclone';
+    document.title = 'PicFit';
   }, []);
 
   return (

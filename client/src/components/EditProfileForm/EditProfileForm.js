@@ -70,7 +70,7 @@ const EditProfileForm = ({
   });
 
   useEffect(() => {
-    document.title = 'Edit Profile • Instaclone';
+    document.title = 'Edit Profile • PicFit';
   }, []);
 
   return (
