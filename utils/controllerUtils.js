@@ -116,7 +116,7 @@ module.exports.sendEmail = async (to, subject, template) => {
     },
   });
   await transporter.sendMail({
-    from: '"Instaclone Support" <support@instaclone.net>',
+    from: '"PicFit Support" <support@PicFit.net>',
     to,
     subject,
     html: template,
@@ -147,7 +147,7 @@ module.exports.sendConfirmationEmail = async (
         confirmationUrl: `${process.env.HOME_URL}/confirm/${confirmationToken}`,
         url: process.env.HOME_URL,
       });
-      await this.sendEmail(email, 'Confirm your instaclone account', html);
+      await this.sendEmail(email, 'Confirm your PicFit account', html);
     } catch (err) {
       console.log(err);
     }

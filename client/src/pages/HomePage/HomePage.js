@@ -30,7 +30,7 @@ const HomePage = ({
   fetching,
 }) => {
   useEffect(() => {
-    document.title = `Instaclone`;
+    document.title = `PicFit`;
     fetchFeedPostsStart(token);
     return () => {
       clearPosts();
