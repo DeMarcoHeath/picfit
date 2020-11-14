@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { Link } from "react-router-dom";
-import "../../pages/LoginPage/loginPage.css";
+
 import { signInStart } from "../../redux/user/userActions";
-// import Image from "react-bootstrap/Image";
+
 import {
   selectError,
   selectFetching,
@@ -16,7 +16,7 @@ import Button from "../Button/Button";
 import FormInput from "../FormInput/FormInput";
 import Divider from "../Divider/Divider";
 import TextButton from "../Button/TextButton/TextButton";
-// import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
+import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
 import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
 import Card from "../Card/Card";
 
@@ -43,17 +43,13 @@ const LoginCard = ({
       style={
         modal
           ? {
-              padding: "1rem",
+              padding: "2rem",
             }
           : {}
       }
     >
       <Card className="form-card">
         <h1 className="heading-logo text-center">PicFit</h1>
- ariloginpage
-        {/* <Image src={require("../../assets/img/logo2.png")} /> */}
-=======
- main
         <form
           onSubmit={(event) => handleSubmit(event)}
           className="form-card__form"
@@ -93,7 +89,6 @@ const LoginCard = ({
             alignItems: "center",
             padding: "2rem",
           }}
-          className="section-box"
         >
           <h4 style={{ marginRight: "5px" }} className="heading-4 font-thin">
             Don't have an account?
