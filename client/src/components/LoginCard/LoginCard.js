@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { Link } from 'react-router-dom';
-
-import { signInStart } from '../../redux/user/userActions';
-
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { Link } from "react-router-dom";
+import "../../pages/LoginPage/loginPage.css";
+import { signInStart } from "../../redux/user/userActions";
+// import Image from "react-bootstrap/Image";
 import {
   selectError,
   selectFetching,
   selectCurrentUser,
-} from '../../redux/user/userSelectors';
+} from "../../redux/user/userSelectors";
 
-import Button from '../Button/Button';
-import FormInput from '../FormInput/FormInput';
-import Divider from '../Divider/Divider';
-import TextButton from '../Button/TextButton/TextButton';
-import ViewOnGithubButton from '../ViewOnGithubButton/ViewOnGithubButton';
-import GithubLoginButton from '../GithubLoginButton/GithubLoginButton';
-import Card from '../Card/Card';
+import Button from "../Button/Button";
+import FormInput from "../FormInput/FormInput";
+import Divider from "../Divider/Divider";
+import TextButton from "../Button/TextButton/TextButton";
+// import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
+import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
+import Card from "../Card/Card";
 
 const LoginCard = ({
   signInStart,
@@ -28,8 +28,8 @@ const LoginCard = ({
   onClick,
   modal,
 }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     signInStart(email, password);
@@ -43,13 +43,17 @@ const LoginCard = ({
       style={
         modal
           ? {
-              padding: '2rem',
+              padding: "1rem",
             }
           : {}
       }
     >
       <Card className="form-card">
         <h1 className="heading-logo text-center">PicFit</h1>
+ ariloginpage
+        {/* <Image src={require("../../assets/img/logo2.png")} /> */}
+=======
+ main
         <form
           onSubmit={(event) => handleSubmit(event)}
           className="form-card__form"
@@ -73,24 +77,25 @@ const LoginCard = ({
         <Divider>OR</Divider>
         <GithubLoginButton />
         {error && (
-          <p style={{ padding: '1rem 0' }} className="error">
+          <p style={{ padding: "1rem 0" }} className="error">
             {error}
           </p>
         )}
-        <TextButton style={{ marginTop: '1.5rem' }} darkBlue small>
+        <TextButton style={{ marginTop: "1.5rem" }} darkBlue small>
           Forgot password?
         </TextButton>
       </Card>
       <Card>
         <section
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '2rem',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "2rem",
           }}
+          className="section-box"
         >
-          <h4 style={{ marginRight: '5px' }} className="heading-4 font-thin">
+          <h4 style={{ marginRight: "5px" }} className="heading-4 font-thin">
             Don't have an account?
           </h4>
           <Link to="/signup" onClick={() => onClick && onClick()}>
@@ -100,7 +105,7 @@ const LoginCard = ({
           </Link>
         </section>
       </Card>
-      <ViewOnGithubButton />
+      {/* <ViewOnGithubButton /> */}
     </div>
   );
 };

@@ -1,21 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Icon from '../../Icon/Icon';
+import Icon from "../../Icon/Icon";
 
 const SmallFooter = () => {
   const links = [
-    'About',
-    'Help',
-    'Press',
-    'API',
-    'Jobs',
-    'Privacy',
-    'Terms',
-    'Locations',
-    'Top Accounts',
-    'Hashtags',
-    'Language',
+    // "About",
+    // "Help",
+    // "Press",
+    // "API",
+    // "Jobs",
+    // "Privacy",
+    // "Terms",
+    // "Locations",
+    // "Top Accounts",
+    // "Hashtags",
+    // "Language",
   ];
   return (
     <footer className="footer--small color-grey-2 font-bold">
@@ -28,15 +28,15 @@ const SmallFooter = () => {
       </div>
       <h5
         className="heading-5 color-grey-2 footer--small__copyright mt-lg font-bold"
-        style={{ textTransform: 'uppercase ' }}
+        style={{ textTransform: "uppercase " }}
       >
-        Made with{' '}
+        Made with{" "}
         <Icon
           icon="heart"
-          className="color-grey-2 icon--small"
-          style={{ margin: '0 5px' }}
-        />{' '}
-        by DeMarco, Ari, tia, and Chidinma
+          className="color-red-2 icon--small"
+          style={{ margin: "0 5px" }}
+        />{" "}
+        by DeMarco, Ari, Tia, and Chidinma
       </h5>
     </footer>
   );

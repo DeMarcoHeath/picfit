@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import TextButton from '../Button/TextButton/TextButton';
-import Icon from '../Icon/Icon';
+import TextButton from "../Button/TextButton/TextButton";
+import Icon from "../Icon/Icon";
 
 const Footer = () => (
   <footer className="footer">
-    <div className="footer__left">
+    {/* <div className="footer__left">
       <TextButton bold small darkBlue>
         ABOUT
       </TextButton>
@@ -27,19 +27,19 @@ const Footer = () => (
       <TextButton bold small darkBlue>
         TERMS
       </TextButton>
-    </div>
+    </div> */}
     <div className="footer__right">
       <h4
-        className="heading-4 color-grey font-bold"
-        style={{ display: 'flex', alignItems: 'center' }}
+        className="heading-4 color-black font-bold"
+        style={{ display: "flex", alignItems: "center" }}
       >
         MADE WITH
         <Icon
-          className="icon--small color-grey"
+          className="icon--small color-red"
           icon="heart"
-          style={{ display: 'inline-block', margin: '0 5px' }}
-        />{' '}
-        by DeMarco, Ari, tia, and Chidinma
+          style={{ display: "inline-block", margin: "0 5px" }}
+        />{" "}
+        by DeMarco, Ari, Tia, and Chidinma
       </h4>
     </div>
   </footer>
