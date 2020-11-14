@@ -1,0 +1,24 @@
+.footer,
+.app {
+  background-color: lightsteelblue;
+}
+
+/* LOGO LOGIN FORM */
+.login-card-container {
+  position: absolute;
+  top: 90px;
+  right: 5px;
+  width: 415px;
+}
+
+.login-page {
+  background-repeat: no-repeat;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.form-card,
+.section-box {
+  background: linear-gradient(0.15turn, #ebf8e1, #f69d3c);
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR6kh_jPfRXlzdsE_wtZUF1bwpYk_AdsyCKDzbx3PrYd27vwGq7IU0h3i6ScdXE2JiOZ17gAJK_Z3A6u46fxIHJ-ufBm6ea9CNgs9eyRKE&usqp=CAE"); */
+}
