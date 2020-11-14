@@ -22,7 +22,7 @@ const ChangePasswordForm = ({ currentUser, token, showAlert }) => {
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
   const [fetching, setFetching] = useState(false);
   useEffect(() => {
-    document.title = 'Change Password • Instaclone';
+    document.title = 'Change Password • PicFit';
   }, []);
 
   const handleSubmit = async (event) => {

@@ -65,7 +65,7 @@ const SuggestedUsers = ({ token, showAlert, card, style, max }) => {
         </div>
         <div className="suggested-users__small">
           <div className="suggested-users__title">
-            <h2 className="heading-2 font-thin">Welcome to Instaclone</h2>
+            <h2 className="heading-2 font-thin">Welcome to PicFit</h2>
             <h3 className="heading-3 font-medium color-grey">
               When you follow somebody you can see their photos here.
             </h3>

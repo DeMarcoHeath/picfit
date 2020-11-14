@@ -50,7 +50,10 @@ const LoginCard = ({
     >
       <Card className="form-card">
         <h1 className="heading-logo text-center">PicFit</h1>
+ ariloginpage
         {/* <Image src={require("../../assets/img/logo2.png")} /> */}
+=======
+ main
         <form
           onSubmit={(event) => handleSubmit(event)}
           className="form-card__form"

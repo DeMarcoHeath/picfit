@@ -14,7 +14,7 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 const ExplorePage = ({ token, showAlert, showModal, match }) => {
   useEffect(() => {
-    document.title = 'Instaclone';
+    document.title = 'PicFit';
   }, []);
 
   return (
