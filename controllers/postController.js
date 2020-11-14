@@ -10,6 +10,7 @@ const socketHandler = require('../handlers/socketHandler');
 const fs = require('fs');
 const ObjectId = require('mongoose').Types.ObjectId;
 
+
 const {
   retrieveComments,
   formatCloudinaryUrl,
@@ -20,7 +21,7 @@ const filters = require('../utils/filters');
 module.exports.createPost = async (req, res, next) => {
   const user = res.locals.user;
   const { caption, filter: filterName } = req.body;
-  let post = undefined;
+  let post = new Post;
   const filterObject = filters.find((filter) => filter.name === filterName);
   const hashtags = [];
   linkify.find(caption).forEach((result) => {
@@ -53,6 +54,7 @@ module.exports.createPost = async (req, res, next) => {
     );
     fs.unlinkSync(req.file.path);
     post = new Post({
+      ...post.toObject(),
       image: response.secure_url,
       thumbnail: thumbnailUrl,
       filter: filterObject ? filterObject.filter : '',
