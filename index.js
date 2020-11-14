@@ -8,7 +8,7 @@ const path = require("path");
 const socketio = require("socket.io");
 const jwt = require("jwt-simple");
 
-const apiRouter = require("./routes");
+const apiRouter = require("./routes/index.js");
 
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -67,6 +67,10 @@ app.use((err, req, res, next) => {
         : err.message,
   });
 });
+
+var routes = require("./routes/index.js");
+
+app.use(routes);
 
 const expressServer = app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
