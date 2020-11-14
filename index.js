@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.js"));
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
 
@@ -68,9 +68,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-var routes = require("./routes/index.js");
-
-app.use(routes);
 
 const expressServer = app.listen(PORT, () => {
   console.log(`Backend listening on port ${PORT}`);
