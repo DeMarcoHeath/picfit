@@ -8,7 +8,7 @@ const path = require("path");
 const socketio = require("socket.io");
 const jwt = require("jwt-simple");
 
-const apiRouter = require("./routes/index.js");
+const apiRouter = require("./routes");
 
 const app = express();
 const PORT = process.env.PORT || 9000;
