@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === "production") {
 
 (async function () {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/obscure-caverns-27395', {
+    await mongoose.connect(process.env.MONGO_URI,  {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
