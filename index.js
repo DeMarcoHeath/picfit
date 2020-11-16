@@ -30,9 +30,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(compression());
   app.use(express.static(path.join(__dirname, "client/build")));
 
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  });
+  
 }
 
 (async function () {
