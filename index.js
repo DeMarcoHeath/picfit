@@ -37,18 +37,9 @@ if (process.env.NODE_ENV === "production") {
 
 (async function () {
   try {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/obscure-caverns-27395', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    });
-    console.log("Connected to database");
-    
-  } catch (err) {
-    console.log(err)
-    throw new Error(err);
-  }
-})();
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/aqueous-falls-04056'
+const mongooseConfig = { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }
+mongoose.connect(MONGODB_URI, mongooseConfig, error => console.log(error || '--> Connected to Database'))
 
 app.use((err, req, res, next) => {
   console.log(err.message);
