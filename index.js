@@ -43,7 +43,9 @@ if (process.env.NODE_ENV === "production") {
       useCreateIndex: true,
     });
     console.log("Connected to database");
+    
   } catch (err) {
+    console.log(err)
     throw new Error(err);
   }
 })();
