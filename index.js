@@ -35,31 +35,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-(async function () {
-  try {
-    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/aqueous-falls-04056'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/aqueous-falls-04056'
 const mongooseConfig = { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }
 mongoose.connect(MONGODB_URI, mongooseConfig, error => console.log(error || '--> Connected to Database'))
-
-app.use((err, req, res, next) => {
-  console.log(err.message);
-  if (!err.statusCode) {
-    err.statusCode = 500;
-  }
-  if (err.name === "MulterError") {
-    if (err.message === "File too large") {
-      return res
-        .status(400)
-        .send({ error: "Your file exceeds the limit of 10MB." });
-    }
-  }
-  res.status(err.statusCode).send({
-    error:
-      err.statusCode >= 500
-        ? "An unexpected error ocurred, please try again later."
-        : err.message,
-  });
-});
 
 
 const expressServer = app.listen(PORT, () => {
