@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/obscure-caverns-27395'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/test'
 const mongooseConfig = { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }
 mongoose.connect(MONGODB_URI, mongooseConfig, error => console.log(error || '--> Connected to Database'))
 
