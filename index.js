@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/aqueous-falls-04056'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/aqueous-falls-04056'
 const mongooseConfig = { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false }
 mongoose.connect(MONGODB_URI, mongooseConfig, error => console.log(error || '--> Connected to Database'))
 
