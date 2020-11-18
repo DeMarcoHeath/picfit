@@ -16,7 +16,7 @@ import Button from "../Button/Button";
 import FormInput from "../FormInput/FormInput";
 import Divider from "../Divider/Divider";
 import TextButton from "../Button/TextButton/TextButton";
-import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
+// import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
 import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
 import Card from "../Card/Card";
 
@@ -89,6 +89,7 @@ const LoginCard = ({
             alignItems: "center",
             padding: "2rem",
           }}
+          className="section-box"
         >
           <h4 style={{ marginRight: "5px" }} className="heading-4 font-thin">
             Don't have an account?
