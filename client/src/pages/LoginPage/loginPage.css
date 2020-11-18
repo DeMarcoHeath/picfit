@@ -11,10 +11,24 @@
   width: 415px;
 }
 
+.signup-card-container {
+  position: absolute;
+  margin-right: 60px;
+  right: 60px;
+  width: 500px;
+  height: 50px;
+}
+
 .login-page {
   background-repeat: no-repeat;
   margin-top: 2px;
   margin-left: 2px;
+}
+
+.sign-up-page {
+  background-repeat: no-repeat;
+  margin-top: 2px;
+  /* margin-left: 2px; */
 }
 
 .form-card,
