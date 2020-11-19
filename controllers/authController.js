@@ -16,10 +16,10 @@ const {
   validatePassword,
 } = require('../utils/validation');
 
-module.exports.verifyJwt = (string) => {
+module.exports.verifyJwt = (token) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const id = jwt.decode(string, process.env.JWT_SECRET).id;
+      const id = jwt.decode(token, process.env.JWT_SECRET).id;
       const user = await User.findOne(
         { _id: id },
         'email username avatar bookmarks bio fullName confirmed website'
