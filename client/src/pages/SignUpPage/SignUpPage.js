@@ -8,6 +8,7 @@ import { selectCurrentUser } from "../../redux/user/userSelectors";
 import signupImage from "../../assets/img/brownwalkin.jpg";
 
 import SignUpCard from "../../components/SignUpCard/SignUpCard";
+import { Container, Row, Col } from "react-bootstrap";
 
 const SignUpPage = ({ currentUser }) => {
   const history = useHistory();
@@ -15,16 +16,22 @@ const SignUpPage = ({ currentUser }) => {
     if (currentUser) history.push("/");
   }, [currentUser, history]);
   return (
-    <main
-      style={{
-        backgroundImage: `url(${signupImage})`,
-        width: "100%",
-        height: "650px",
-      }}
-      className="sign-up-page"
-    >
-      <SignUpCard />
-    </main>
+    <Container>
+      <Row>
+        <Col md={6}>
+          <main
+            style={{
+              backgroundImage: `url(${signupImage})`,
+              width: "100%",
+              height: "650px",
+            }}
+            className="sign-up-page"
+          >
+            <SignUpCard />
+          </main>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

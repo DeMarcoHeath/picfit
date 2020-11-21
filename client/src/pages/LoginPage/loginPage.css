@@ -14,8 +14,9 @@
 /* SIGN UP FORM */
 .signup-card-container {
   position: absolute;
-  margin-right: 60px;
-  right: 60px;
+  /* margin-right: auto; */
+  top: 21px;
+  right: 50px;
   width: 500px;
   height: 50px;
 }
@@ -29,6 +30,7 @@
 .sign-up-page {
   background-repeat: no-repeat;
   margin-top: 2px;
+
   /* margin-left: 2px; */
 }
 
@@ -36,4 +38,8 @@
 .section-box {
   background: linear-gradient(0.15turn, #ebf8e1, #f69d3c);
   /* background-image: url("https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR6kh_jPfRXlzdsE_wtZUF1bwpYk_AdsyCKDzbx3PrYd27vwGq7IU0h3i6ScdXE2JiOZ17gAJK_Z3A6u46fxIHJ-ufBm6ea9CNgs9eyRKE&usqp=CAE"); */
+}
+
+.header {
+  background-color: #e9c5a0;
 }
