@@ -1,0 +1,18 @@
+development:
+  cloud_name: hwqyanbn6
+  api_key: '496347594418979'
+  api_secret: pwwX2N-IVsfrwmbqsHSvgED91AY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name:  hwqyanbn6
+  api_key: '496347594418979'
+  api_secret: pwwX2N-IVsfrwmbqsHSvgED91AY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name:  hwqyanbn6
+  api_key: '496347594418979'
+  api_secret: pwwX2N-IVsfrwmbqsHSvgED91AY
+  enhance_image_tag: true
+  static_image_support: false
