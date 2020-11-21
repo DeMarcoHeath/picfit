@@ -63,7 +63,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
           <h1 className="heading-logo text-center">PicFit</h1>
           <h2
             style={{ fontSize: "1.7rem" }}
-            className="heading-2 color-grey text-center"
+            className="heading-2 color-black text-center"
           >
             Sign up to start creating your virtual closet and share with your
             friends!

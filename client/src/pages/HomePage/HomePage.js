@@ -1,24 +1,24 @@
-import React, { useEffect, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+import React, { useEffect, Fragment } from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-import { selectCurrentUser, selectToken } from '../../redux/user/userSelectors';
+import { selectCurrentUser, selectToken } from "../../redux/user/userSelectors";
 import {
   selectFeedPosts,
   selectHasMore,
   selectFeedFetching,
-} from '../../redux/feed/feedSelectors';
-import { fetchFeedPostsStart, clearPosts } from '../../redux/feed/feedActions';
+} from "../../redux/feed/feedSelectors";
+import { fetchFeedPostsStart, clearPosts } from "../../redux/feed/feedActions";
 
-import useScrollPositionThrottled from '../../hooks/useScrollPositionThrottled';
+import useScrollPositionThrottled from "../../hooks/useScrollPositionThrottled";
 
-import Feed from '../../components/Feed/Feed';
-import UserCard from '../../components/UserCard/UserCard';
-import SmallFooter from '../../components/Footer/SmallFooter/SmallFooter';
-import MobileHeader from '../../components/Header/MobileHeader/MobileHeader';
-import Icon from '../../components/Icon/Icon';
-import NewPostButton from '../../components/NewPost/NewPostButton/NewPostButton';
-import SuggestedUsers from '../../components/Suggestion/SuggestedUsers/SuggestedUsers';
+import Feed from "../../components/Feed/Feed";
+import UserCard from "../../components/UserCard/UserCard";
+// import SmallFooter from '../../components/Footer/SmallFooter/SmallFooter';
+import MobileHeader from "../../components/Header/MobileHeader/MobileHeader";
+import Icon from "../../components/Icon/Icon";
+import NewPostButton from "../../components/NewPost/NewPostButton/NewPostButton";
+import SuggestedUsers from "../../components/Suggestion/SuggestedUsers/SuggestedUsers";
 
 const HomePage = ({
   currentUser,
@@ -51,7 +51,7 @@ const HomePage = ({
     <Fragment>
       <MobileHeader>
         <NewPostButton />
-        <h3 style={{ fontSize: '2.5rem' }} className="heading-logo">
+        <h3 style={{ fontSize: "2.5rem" }} className="heading-logo">
           PicFit
         </h3>
         <Icon icon="paper-plane-outline" />
@@ -68,11 +68,11 @@ const HomePage = ({
                   avatar={currentUser.avatar}
                   username={currentUser.username}
                   subText={currentUser.fullName}
-                  style={{ padding: '0' }}
+                  style={{ padding: "0" }}
                   avatarMedium
                 />
-                <SuggestedUsers max={5} style={{ width: '100%' }} />
-                <SmallFooter />
+                <SuggestedUsers max={5} style={{ width: "100%" }} />
+                {/* <SmallFooter /> */}
               </div>
             </aside>
           </Fragment>

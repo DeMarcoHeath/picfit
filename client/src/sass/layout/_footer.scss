@@ -1,5 +1,5 @@
 .footer {
-  margin-top: auto;
+  // margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,7 @@
       font-size: 1.2rem;
 
       &:not(:last-child)::after {
-        content: '\00B7';
+        content: "\00B7";
         margin: 0 3px;
       }
     }
