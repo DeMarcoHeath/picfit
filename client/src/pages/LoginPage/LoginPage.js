@@ -10,6 +10,7 @@ import { githubSignInStart } from "../../redux/user/userActions";
 import { selectCurrentUser } from "../../redux/user/userSelectors";
 
 import LoginCard from "../../components/LoginCard/LoginCard";
+import { Container, Row, Col } from "react-bootstrap";
 
 const LoginPage = ({ currentUser, githubSignInStart }) => {
   const history = useHistory();
@@ -29,17 +30,25 @@ const LoginPage = ({ currentUser, githubSignInStart }) => {
   }, [authState, code, githubSignInStart]);
 
   return (
-    <main
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        width: "95%",
-        height: "630px",
-      }}
-      data-test="page-login"
-      className="login-page"
-    >
-      <LoginCard />
-    </main>
+    <Container>
+      <Row>
+        <Col md={8}>
+          <main
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              width: "98%",
+              height: "630px",
+            }}
+            data-test="page-login"
+            className="login-page"
+          >
+            <Col sm={12}>
+              <LoginCard />
+            </Col>
+          </main>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
