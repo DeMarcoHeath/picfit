@@ -9,6 +9,7 @@ import signupImage from "../../assets/img/brownwalkin.jpg";
 
 import SignUpCard from "../../components/SignUpCard/SignUpCard";
 import { Container, Row, Col } from "react-bootstrap";
+import "../LoginPage/loginPage.css";
 
 const SignUpPage = ({ currentUser }) => {
   const history = useHistory();
@@ -16,19 +17,36 @@ const SignUpPage = ({ currentUser }) => {
     if (currentUser) history.push("/");
   }, [currentUser, history]);
   return (
-    <Container>
+    // <Container>
+    //   <Row>
+    //     <Col md={6}>
+    //       <main
+    //         style={{
+    //           backgroundImage: `url(${signupImage})`,
+    //           width: "100%",
+    //           height: "650px",
+    //         }}
+    //         className="sign-up-page"
+    //       >
+    //         <SignUpCard />
+    //       </main>
+    //     </Col>
+    //   </Row>
+    // </Container>
+    <Container
+      style={{
+        backgroundImage: `url(${signupImage})`,
+        height: "650px",
+        backgroundSize: "initial",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <Row>
-        <Col md={6}>
-          <main
-            style={{
-              backgroundImage: `url(${signupImage})`,
-              width: "100%",
-              height: "650px",
-            }}
-            className="sign-up-page"
-          >
-            <SignUpCard />
-          </main>
+        <Col md={7}>
+          <main></main>
+        </Col>
+        <Col>
+          <SignUpCard />
         </Col>
       </Row>
     </Container>

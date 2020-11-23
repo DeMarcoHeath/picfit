@@ -39,7 +39,7 @@ const LoginCard = ({
 
   return (
     <div
-      className="login-card-container"
+      id="login-card-holder"
       style={
         modal
           ? {
