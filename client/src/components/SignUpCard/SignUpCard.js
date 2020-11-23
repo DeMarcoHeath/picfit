@@ -16,11 +16,11 @@ import {
 
 import Button from "../Button/Button";
 import TextButton from "../Button/TextButton/TextButton";
-import Divider from "../Divider/Divider";
+// import Divider from "../Divider/Divider";
 import Card from "../Card/Card";
 import FormInput from "../FormInput/FormInput";
 // import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
-import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
+// import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
 
 const SignUpCard = ({ signUpStart, error, fetching }) => {
   const validate = (values) => {
@@ -68,7 +68,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
             Sign up to start creating your virtual closet and share with your
             friends!
           </h2>
-          <GithubLoginButton
+          {/* <GithubLoginButton
             style={{
               display: "flex",
               alignItems: "center",
@@ -78,7 +78,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
             }}
             button
           />
-          <Divider>OR</Divider>
+          <Divider>OR</Divider> */}
           <form className="form-card__form" onSubmit={formik.handleSubmit}>
             <FormInput
               name="email"
