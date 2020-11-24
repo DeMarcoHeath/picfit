@@ -17,7 +17,7 @@ import FormInput from "../FormInput/FormInput";
 import Divider from "../Divider/Divider";
 import TextButton from "../Button/TextButton/TextButton";
 // import ViewOnGithubButton from "../ViewOnGithubButton/ViewOnGithubButton";
-import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
+// import GithubLoginButton from "../GithubLoginButton/GithubLoginButton";
 import Card from "../Card/Card";
 
 const LoginCard = ({
@@ -70,8 +70,8 @@ const LoginCard = ({
             Log In
           </Button>
         </form>
-        <Divider>OR</Divider>
-        <GithubLoginButton />
+        {/* <Divider>OR</Divider>
+        <GithubLoginButton /> */}
         {error && (
           <p style={{ padding: "1rem 0" }} className="error">
             {error}
